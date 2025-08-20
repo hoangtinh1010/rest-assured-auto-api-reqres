@@ -89,7 +89,7 @@ public class UserApiTest extends BaseTest {
 
     @Test(priority = 5, dependsOnMethods = "testCreateUser_valid")
     public void testUpdateUser() {
-        JSONObject userPayload = UserDataFactory.createUserWithName("Updated Name");
+        JSONObject userPayload = UserDataFactory.createValidUser();
 
         Response response = updateUser(createdUserId, userPayload);
 
@@ -101,13 +101,10 @@ public class UserApiTest extends BaseTest {
         String name = response.jsonPath().getString("name");
         String job = response.jsonPath().getString("job");
 
-
-
        //Verify response body
-        assertEquals(name, "Updated Name", "Name should be updated");
-        assertEquals(job, createdUserJob, "Job should remain unchanged");
+        assertEquals(name,userPayload.get("name"), "Name should be updated");
+        assertEquals(job, userPayload.get("job"), "Job should remain unchanged");
 
-        System.out.println("Updated user: " + response.asString());
 
     }
 

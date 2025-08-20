@@ -28,4 +28,12 @@ public class UserDataFactory {
         return user;
 
     }
+
+    public static JSONObject updateUserWithName() {
+        JSONObject user = new JSONObject();
+        user.put("name", faker.name().firstName());
+        return user;
+
+
+    }
 }
