@@ -149,12 +149,21 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
         <configuration>
+          <!-- Cấu hình testng.xml -->
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+
+          <!-- Cấu hình Allure -->
           <systemPropertyVariables>
             <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
           </systemPropertyVariables>
+
+          <!-- Bổ sung để in log chi tiết ra console -->
+          <useFile>false</useFile>
+          <printSummary>true</printSummary>
+          <redirectTestOutputToFile>false</redirectTestOutputToFile>
+          <trimStackTrace>false</trimStackTrace>
         </configuration>
       </plugin>
       <!-- Allure Maven Plugin for reporting -->
