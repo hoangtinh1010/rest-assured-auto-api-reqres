@@ -42,6 +42,7 @@
       <jackson.version>2.13.0</jackson.version>
       <allure.version>2.27.0</allure.version>
       <rest-assured.version>5.5.2</rest-assured.version>
+    <lombox.version>1.18.28</lombox.version>
 
   </properties>
 
@@ -106,7 +107,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.12</version>
+      <version>${lombox.version}</version>
     </dependency>
     <dependency>
       <groupId>com.github.javafaker</groupId>
@@ -140,6 +141,13 @@
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombox.version}</version>
+            </path>
+          </annotationProcessorPaths>
         </configuration>
       </plugin>
 
