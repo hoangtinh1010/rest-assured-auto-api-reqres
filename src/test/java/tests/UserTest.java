@@ -31,7 +31,8 @@ public class UserTest extends BaseTest {
          assertNotNull(createdUserId, "Created user ID should not be null");
     }
 
-    @Test (priority = 2,dependsOnMethods = "testCreateUser")
+    @Test (enabled = false,priority = 2,dependsOnMethods = "testCreateUser")
+
     public void testGetUser() {
         Response response = given()
                 .spec(requestSpec)

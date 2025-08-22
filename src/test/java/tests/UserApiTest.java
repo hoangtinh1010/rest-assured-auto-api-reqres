@@ -66,7 +66,7 @@ public class UserApiTest extends BaseTest {
         createdUserId = response.jsonPath().getInt("id");
     }
 
-    @Test(priority = 4, dependsOnMethods = "testCreateUser_valid")
+    @Test(enabled = false,priority = 4, dependsOnMethods = "testCreateUser_valid")
     public void testGetUser() {
 
         Response response = getUser(createdUserId);

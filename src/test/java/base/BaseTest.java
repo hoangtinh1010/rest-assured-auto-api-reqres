@@ -53,8 +53,10 @@ public class BaseTest {
             requestSpec = RestAssured.given()
                     .headers("Content-Type", "application/json",
                             "x-api-key", ConfigManager.get("apiKey"))
-                    .filter(new RequestLoggingFilter(LogDetail.ALL))
-                    .filter(new ResponseLoggingFilter(LogDetail.ALL));
+                    .filter(new RequestLoggingFilter(LogDetail.METHOD))
+                    .filter(new RequestLoggingFilter(LogDetail.URI))
+                    .filter(new RequestLoggingFilter(LogDetail.BODY))
+                    .filter(new ResponseLoggingFilter(LogDetail.BODY));
 
     }
 }

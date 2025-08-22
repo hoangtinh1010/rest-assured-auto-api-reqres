@@ -15,8 +15,6 @@ public class UserDataProviderTest extends BaseTest {
         // Kiểm tra mã trạng thái trả về
         response.then().statusCode(expectedStatusCode);
 
-        System.out.println("expectedStatusCode: " + expectedStatusCode);
-
 
         // Thêm các kiểm tra khác nếu cần
     }
