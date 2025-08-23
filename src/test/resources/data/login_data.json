@@ -1,0 +1,10 @@
+{
+  "valid": {
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+  },
+  "invalid": {
+    "email": "wrong1@example.com",
+    "password": "badpass"
+  }
+}
