@@ -34,7 +34,7 @@ public class LoginTest extends BaseTest {
         String token = response.jsonPath().getString("token");
         assertNotNull(token, "Token should not be null");
 
-        System.out.println("Login successful, token: " + token);
+        System.out.println("Login successful, Token: " + token);
     }
 
     @Test (priority = 2)
