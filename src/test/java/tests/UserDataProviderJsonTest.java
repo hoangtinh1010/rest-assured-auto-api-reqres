@@ -1,5 +1,5 @@
 package tests;
-import apis.UserApi;
+import endpoints.UserApi;
 import io.restassured.response.Response;
 import net.minidev.json.JSONObject;
 import providers.UserDataProviderJson;

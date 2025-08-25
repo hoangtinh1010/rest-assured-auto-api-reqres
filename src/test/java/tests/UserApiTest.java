@@ -4,10 +4,9 @@ import base.BaseTest;
 import data.UserDataFactory;
 import io.restassured.response.Response;
 import net.minidev.json.JSONObject;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static apis.UserApi.*;
+import static endpoints.UserApi.*;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.testng.Assert.assertEquals;

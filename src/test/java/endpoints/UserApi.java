@@ -1,4 +1,4 @@
-package apis;
+package endpoints;
 
 import base.BaseTest;
 import io.restassured.response.Response;
