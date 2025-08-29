@@ -16,7 +16,6 @@ public class UserApi extends BaseTest {
                 .body(userPayload)
                 .post("/users")
                 .then()
-                .log().all()
                 .extract()
                 .response();
     }
@@ -28,7 +27,6 @@ public class UserApi extends BaseTest {
                 .body(userPayload)
                 .put("/users/" + id)
                 .then()
-                .log().all()
                 .extract()
                 .response();
     }
@@ -39,7 +37,6 @@ public class UserApi extends BaseTest {
                 .when()
                 .get("/users/" + id)
                 .then()
-                .log().all()
                 .extract()
                 .response();
     }
@@ -50,7 +47,6 @@ public class UserApi extends BaseTest {
                 .when()
                 .delete("/users/" + id)
                 .then()
-                .log().all()
                 .extract()
                 .response();
     }
